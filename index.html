@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Salon Name</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eeeeee;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #daaaaa;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .header {
+            position: relative;
+        }
+        
+        .clip-left,
+        .clip-right {
+            position: absolute;
+            width: 15%;
+            height: auto;
+            top: -20px;
+            /* Adjust this value as needed to control the vertical position */
+        }
+        
+        .clip-left {
+            left: 0;
+        }
+        
+        .clip-right {
+            right: 0;
+        }
+        
+        h1,
+        h2 {
+            font-family: 'Georgia', serif;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #daaaaa;
+            padding: 10px 0;
+            width: 100%;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            margin: 0 5px;
+            border: 3px solid #be8888;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333333;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .contact {
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            text-decoration: underline;
+            font-family: 'Lobster', cursive;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .image {
+            width: 120%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+            animation: fadeInOut 8s infinite ease-in-out;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        
+        .faq-item h3 {
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333333;
+        }
+        
+        @keyframes fadeInOut {
+            0%,
+            100% {
+                opacity: 0;
+            }
+            5%,
+            90% {
+                opacity: 1;
+            }
+        }
+        
+        .social-media-icon {
+            width: 5%;
+            height: auto;
+        }
+        
+        .footer-text {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+            color: grey;
+            padding: 10px;
+        }
+        /* Add this CSS to hide the vertical scrollbar */
+        
+        body::-webkit-scrollbar {
+            width: 0.5em;
+        }
+        
+        body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="clip.png" alt="Clip Left" class="clip-left">
+        <img src="clip.png" alt="Clip Right" class="clip-right">
+        <h1>Example Salon</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to Example Salon</h2>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, velit ac commodo aliquet, lectus massa volutpat odio, eget interdum tortor nulla sit amet massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, velit
+            ac commodo aliquet, lectus massa volutpat odio, eget interdum tortor nulla sit amet massa.
+        </p>
+        <div class="image-container" id="slideshow-container">
+            <img src="image1.jpg" alt="Image 1" class="image">
+            <img src="image2.jpg" alt="Image 2" class "image" style="display: none;">
+            <img src="image3.jpg" alt="Image 3" class="image" style="display: none;">
+        </div>
+
+        <h2>Our Services</h2>
+        <p class "text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, velit ac commodo aliquet, lectus massa volutpat odio, eget interdum tortor nulla sit amet massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, velit
+            ac commodo aliquet, lectus massa volutpat odio, eget interdum tortor nulla sit amet massa.
+            <div class="image-container" id="slideshow-container">
+                <img src="service1.jpg" alt="Service 1" class="image">
+                <img src="service2.jpg" alt="Service 2" class="image" style="display: none;">
+                <img src="service3.jpg" alt="Service 3" class="image" style="display: none;">
+            </div>
+            <div class="faq-container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>Question 1</h3>
+                    <p>Answer 1</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Question 2</h3>
+                    <p>Answer 2</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Question 3</h3>
+                    <p>Answer 3</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <h3>Contacts</h3>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@example.com</p>
+                <p>Address: 123 Example Road</p>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>9:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>9:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9:00 AM - 4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
+                    <img src="instagram-logo.png" alt="Instagram" class="social-media-icon">
+                </a>
+                <a href="https://www.facebook.com/your_facebook_profile" target="_blank">
+                    <img src="facebook-logo.png" alt="Facebook" class="social-media-icon">
+                </a>
+                <a href="https://www.twitter.com/your_twitter_profile" target="_blank">
+                    <img src="twitter-logo.png" alt="Twitter" class="social-media-icon">
+                </a>
+            </div>
+
+
+
+            <p class="footer-text">Distributed By Lumera Corp &#169;</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const imageContainers = document.querySelectorAll(".image-container");
+
+    imageContainers.forEach((container) => {
+        const images = container.querySelectorAll(".image");
+        let currentIndex = 0;
+
+        function nextSlide() {
+            images[currentIndex].style.display = "none";
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = "block";
+        }
+
+        setInterval(nextSlide, 6000);
+    });
+</script>
